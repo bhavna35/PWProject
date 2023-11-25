@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <style>
+    .wrapper {
+      position: relative;
+      height: 32.5rem;
+      margin: 6.25rem 0 12.25rem;
+    }
+
+    .heroimage {
+      background: url(/RedBusProject/assets/HeroImage.png) no-repeat;
+      background-size: contain;
+      /* Ensure the background covers the entire container */
+      min-height: 100vh;
+      color: rgb(255, 255, 255);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .heroimage h1 {
+      margin-top: 100px;
+      margin-left: 60px;
+    }
+
+    .route {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      justify-content: center;
+      position: absolute;
+      top: 136px;
+    }
+
+    .redbus-route {
+      display: flex;
+      align-items: center;
+      width: 60%;
+      height: 100px;
+      left: 10px;
+      top: 40px;
+      position: relative;
+      cursor: pointer;
+      border-radius: 32px;
+      background: rgb(255, 255, 255);
+    }
+
+    .icons {
+      width: 40px;
+      height: 40px;
+      background: rgb(255, 255, 255);
+      color: rgb(107, 107, 107);
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+
+    }
+
+    #arrow {
+      margin-left: 205px;
+      margin-top: 8px;
+    }
+
+    .bus-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 32px;
+      width: 30px;
+      height: 30px;
+      background: rgb(255, 255, 255);
+      color: rgb(107, 107, 107);
+    }
+
+    .route input {
+      display: none;
+    }
+
+
+    .from,
+    .to,
+    .date,
+    .search-area {
+      flex: 1;
+      text-align: center;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .to,
+    .date,
+    .search-area {
+      border-left: 1px solid rgb(107, 107, 107);
+      height: 100%;
+    }
+
+    .offerwrapper {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -151px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      height: 18.75rem;
+    }
+
+    .offersection {
+      width: 1100px;
+      padding: 2rem;
+      background: rgb(255, 255, 255);
+      border-radius: 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .offerheadsection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .offertext {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 39px;
+      color: #4a4a4a;
+    }
+
+    .viewoffer {
+      color: rgb(16, 52, 217);
+      font-weight: 600;
+      border-radius: 1.5rem;
+      border: 1px solid rgb(170, 170, 170);
+      padding: 10px 24px;
+      font-size: 18px;
+      cursor: pointer;
+
+    }
+
+    .webcarasoul {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      gap: 1.5rem;
+    }
+
+    .webcarasoul .card {
+      flex: 1;
+      /* Make each image div take equal space within the container */
+      margin: 0 5px;
+      /* Add some margin between the image divs */
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .webcarasoul img {
+
+      width: 100%;
+      /* Ensure images take up the full width of their container */
+      height: 200px;
+      /* Set a fixed height for all images */
+      object-fit: cover;/
+    }
+
+    .adWrapper {
+      margin: 4rem 0;
+    }
+
+    .adtechCard {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .adcard {
+      width: 970px;
+      height: 90px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .about-container {
+      margin: 0 7.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-us-main-container {
+      margin: 5.625rem 0;
+    }
+
+    .about-us {
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+    }
+
+    .about-us-left-top {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-us-heading {
+      font-weight: 400;
+      font-size: 2.5rem;
+      line-height: 3.75rem;
+      color: rgb(29, 29, 29);
+      width: 34.5rem;
+      margin: 0px;
+    }
+
+    .about-lob {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+    }
+
+    .lob-container {
+      display: flex;
+      flex-direction: column;
+      min-width: 13.75rem;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    .about-cab {
+      display: flex;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 0.875rem 1rem;
+      gap: 0.75rem;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgb(216, 78, 85);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .about-cab img {
+      filter: brightness(1);
+      opacity: 0.75;
+      width: 3.125rem;
+      height: 1.75rem;
+    }
+
+    .lob-text {
+      width: 8.125rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .footerBorderSelected {
+      border-bottom: 3px solid rgb(216, 78, 85);
+      border-radius: 3px 3px 0px 0px;
+    }
+
+    .aboutus-separator {
+      height: 3.6875rem;
+      border-bottom: 1px solid rgb(229, 229, 229);
+      width: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .separator {
+      height: 25px;
+      width: 1px;
+      background: rgb(229, 229, 229);
+    }
+
+    .about-train {
+      display: flex;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 0.875rem 1rem;
+      gap: 0.75rem;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+
+    .about-train img {
+      filter: brightness(0);
+      opacity: 0.75;
+      width: 3.125rem;
+      height: 1.75rem;
+    }
+
+    .footerBorder {
+      height: 3px;
+      border-bottom: 1px solid rgb(229, 229, 229);
+    }
+
+    .slide-right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 20.25rem;
+    }
+
+    .slide-text {
+      width: 550px;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 2.125rem;
+      color: rgb(29, 29, 29);
+      margin-bottom: 1.5rem;
+    }
+
+    .slide-icon {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .slide-icon-text {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 17px;
+      color: rgb(29, 29, 29);
+    }
+
+    .about-us-bookoption {
+      text-decoration: none;
+      width: fit-content;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 0.9rem 1rem;
+      gap: 0.75rem;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: rgb(216, 78, 85);
+      color: rgb(255, 255, 255);
+      border: 1px solid rgb(216, 78, 85);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .rightsection {
+      width: 35.25rem;
+      background-image: url(/RedBusProject/assets/aboutUsImg.svg);
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .img-right {
+      width: 670px;
+      height: 401px;
+      top: 148px;
+      left: -121px;
+      position: absolute;
+    }
+
+  
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="heroimage">
+      <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
+      <div class="route">
+        <div class="redbus-route">
+
+          <div class="from">
+            <div class="bus-icon">
+              <span class="material-symbols-outlined bus-icons">
+                directions_bus
+              </span>
+            </div>
+            <label for="source" class="from-label">From</label>
+            <input id="source" type="text" class="from-input">
+          </div>
+          <div class="icons" id="arrow"><span class="material-symbols-outlined icon">sync_alt</span></div>
+
+
+          <div class="to">
+            <div class="bus-icon">
+              <span class="material-symbols-outlined bus-icons">
+                directions_bus
+              </span>
+            </div>
+            <label for="desti" class="to-label">To</label>
+            <input tabindex="-1" id="desti" type="text" class="to-input">
+          </div>
+
+          <div class="date">Date</div>
+          <div class="search-area">Search Buses</div>
+        </div>
+      </div>
+      <div class="offerwrapper">
+
+        <div class="offersection">
+          <!-- offer head section -->
+          <div class="offerheadsection">
+            <div class="offertext">TRENDING OFFERS</div>
+            <div class="viewoffer">View All</div>
+          </div>
+          <!-- offer card -->
+          <div class="webcarasoul">
+            <div class="card"><img src="assets/card1.jpg" alt=""></div>
+            <div class="card"><img src="assets/card2.png" alt=""></div>
+            <div class="card"><img src="assets/card3.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ad block of page -->
+  <div class="adWrapper">
+    <div class="adtechCard">
+      <div class="adcard">
+        <img src="assets/adcard.png" alt="" style="height: 100%;width: 100%;border-radius: 12px;">
+      </div>
+    </div>
+  </div>
+  <!-- Start of About us  -->
+  <div class="about-container">
+    <div class="about-us-main-container">
+      <div class="about-us">
+        <!-- left -->
+        <div class="about-us-left-top">
+          <!-- left heading section -->
+          <h2 class="about-us-heading">NOW,<b> GET MORE THAN JUST BUS</b> TICKETS WITH REDBUS!</h2>
+          <!-- Start of left lob section -->
+          <div class="about-lob">
+            <!-- start of lob container  for cab -->
+            <div class="lob-container">
+              <div class="about-cab">
+                <img src="assets/cab.svg" alt="">
+                <div class="lob-text">Cab/Rental Buses</div>
+              </div>
+              <!-- horizontal line -->
+              <div class="footerBorderSelected"></div>
+            </div>
+            <!-- vertical separator -->
+            <div class="aboutus-separator">
+              <div class="separator"></div>
+            </div>
+            <!-- Start of lob container for train -->
+            <div class="lob-container">
+              <div class="about-train">
+                <img src="assets/rail_vertical.svg" alt="">
+                <div class="lob-text">Train Tickets</div>
+              </div>
+              <div class="footerBorder"></div>
+            </div>
+          </div>
+          <!-- End of Lob container -->
+          <div class="slide-right">
+            <div class="slide-text">
+              Rent Cabs, Tempo Travellers & Buses with best drivers
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_car.svg" alt="">
+              <div class="slide-icon-text">
+                Outstation
+              </div>
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_car_hourly.svg" alt="">
+              <div class="slide-icon-text">
+                Hourly Rental
+              </div>
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_airport_transport.svg" alt="">
+              <div class="slide-icon-text">Airport Transfers</div>
+            </div>
+          </div>
+          <a href="#" class="about-us-bookoption">Book Cab / Bus Rental<span class="material-symbols-outlined">
+              arrow_forward
+            </span></a>
+        </div>
+        <!-- end of left -->
+        <!-- right -->
+        <div class="rightsection">
+          <img src="assets/rydePopcar.svg" class="img-right">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Start the app block of webpage -->
+  <div class="app-main-block">
+    <div class="app-block">
+      <div class="app">
+        <div class="app-text">Enjoy the App!</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

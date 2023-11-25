@@ -1,0 +1,789 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* header  */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+/* logo */
+.redbus-logo {
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+/* vertical line */
+.vertical-separator {
+  width: 1px;
+  height: 20px;
+  background: #e0e0e0;
+  margin: 0 4rem
+}
+/* header */
+.redbus-header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+/* header  primary item */
+.redbus-primary-items {
+  display: flex;
+}
+
+.redbus-primary-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1em .625rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  margin-right: .75rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.img-rb {
+  width: 5.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.5rem;
+  filter: grayscale(1) brightness(0);
+}
+.redbus-primary-item:hover .img-rb {
+  filter: brightness(1); /* Adjust the brightness value as needed */
+}
+/* header secondary item */
+.redbus-secondary-items {
+  display: flex;
+  margin-left: auto;
+  gap: 3rem;
+}
+
+.redbus-secondary-item {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  cursor: pointer;
+  /* position: relative; */
+}
+/* image wrapper box */
+.wrapper {
+  position: relative;
+  height: 32.5rem;
+  margin: 6.25rem 0 12.25rem;
+}
+/* hero image */
+.heroimage {
+  background: url(/RedBusProject/assets/HeroImage.png) no-repeat;
+  background-size:contain;
+  /* Ensure the background covers the entire container */
+  min-height: 100vh;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.heroimage h1 {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+/* block for selecting path */
+.route {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  position: absolute;
+  top: 136px;
+}
+.redbus-route {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100px;
+  left: 10px;
+  top: 40px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 32px;
+  background: rgb(255, 255, 255);
+}
+.from,.to,
+.date,
+.search-area {
+  flex: 1;
+  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.to,
+.date,
+.search-area {
+border-left: 1px solid rgb(107, 107, 107);
+  height: 100%;
+}
+.route input {
+  display: none;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  color: rgb(107, 107, 107);
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  margin-left: 205px;
+  margin-top: 8px;
+}
+.search-area {
+  margin-right: 0px;
+  flex: 1;
+  background-color: rgb(216, 78, 85);
+  color: white;
+  padding: 10px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bus-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 32px;
+  width: 30px;
+  height: 30px;
+  background: rgb(255, 255, 255);
+  color: rgb(107, 107, 107);
+}
+.offerwrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -151px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 18.75rem;
+}
+
+.offersection {
+  width: 1200px;
+  padding: 2rem;
+  background: rgb(255, 255, 255);
+  border-radius: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.offerheadsection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offertext {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #4a4a4a;
+}
+
+.viewoffer {
+  color: rgb(16, 52, 217);
+  font-weight: 600;
+  border-radius: 1.5rem;
+  border: 1px solid rgb(170, 170, 170);
+  padding: 10px 24px;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+.webcarasoul{
+  width: auto;
+  height:auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+.webcarasoul .card {
+  flex: 1; /* Make each image div take equal space within the container */
+  margin: 0 5px; /* Add some margin between the image divs */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.webcarasoul img
+{
+  
+  width: 100%; /* Ensure images take up the full width of their container */
+  height:200px; /* Set a fixed height for all images */
+  object-fit: cover; /
+}
+.adWrapper {
+margin: 4rem 0;
+}
+.adtechCard {
+margin: 2rem 0;
+display: flex;
+justify-content: center;
+}
+.adcard {
+width: 970px;
+height: 90px;
+position: relative;
+cursor: pointer;
+}
+.about-container {
+  margin: 0 7.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-main-container {
+  margin: 5.625rem 0;
+}
+
+.about-us {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.about-us-left-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-us-heading {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  color: rgb(29, 29, 29);
+  width: 34.5rem;
+  margin: 0px;
+}
+
+.about-lob {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.lob-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 13.75rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.about-cab {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.875rem 1rem;
+  gap: 0.75rem;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(216, 78, 85);
+  font-weight: 700;
+  cursor: pointer;
+}
+.about-cab img {
+filter: brightness(1);
+opacity: 0.75;
+width: 3.125rem;
+height: 1.75rem;
+}
+.lob-text {
+  width: 8.125rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.footerBorderSelected {
+  border-bottom: 3px solid rgb(216, 78, 85);
+  border-radius: 3px 3px 0px 0px;
+}
+
+.aboutus-separator {
+  height: 3.6875rem;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.separator {
+  height: 25px;
+  width: 1px;
+  background: rgb(229, 229, 229);
+}
+.about-train {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.875rem 1rem;
+  gap: 0.75rem;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.about-train img {
+filter: brightness(0);
+opacity: 0.75;
+width: 3.125rem;
+height: 1.75rem;
+}
+.footerBorder{
+height: 3px;
+border-bottom: 1px solid rgb(229, 229, 229);
+}
+.slide-right
+{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 20.25rem;
+}
+.slide-text{
+width: 550px;
+font-weight: 500;
+font-size: 1rem;
+line-height: 2.125rem;
+color: rgb(29, 29, 29);
+margin-bottom: 1.5rem;
+}
+.slide-icon{
+display: flex;
+align-items: center;
+gap: 1.3rem;
+margin-bottom: 1rem;
+}   
+.slide-icon-text{
+font-weight: 700;
+font-size: 1rem;
+line-height: 17px;
+color: rgb(29, 29, 29);
+} 
+.about-us-bookoption{
+  text-decoration: none;
+    width: fit-content;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    gap: 0.75rem;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: rgb(216, 78, 85);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 78, 85);
+    font-weight: 700;
+    cursor: pointer;
+}
+.rightsection{
+  width: 35.25rem;
+    background-image: url(/RedBusProject/assets/aboutUsImg.svg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-right{
+  width: 670px;
+    height: 401px;
+    top: 148px;
+    left: -121px;
+    position: absolute;
+}
+.app-main-block {
+  position: relative;
+  height: 32.5rem;
+  margin: 6.25rem;
+}
+
+.app-block {
+  background-image: url('/RedBusProject/assets/appInstallbg.svg');
+  background-repeat: no-repeat;
+  display: flex;
+  border-radius: 48px;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  background-size: cover;
+  /* Ensure the background covers the entire container */
+  background-position: center;
+  /* Center the background image */
+  width: 100%;
+  background-size: 80%;
+  height: 100%;
+}
+.app-text {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+  top: 100px;
+  left: 150px;
+  position: relative;
+}
+
+.store {
+  display: flex;
+  gap: 4rem;
+  left: 120px;
+  top: 100px;
+  position: relative;
+ 
+}
+
+.store-code {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  width: 17.5rem;
+  height:220px;
+}
+
+.quick-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2.25rem
+}
+
+.quick-access {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem
+}
+
+.quick {
+  font-size: 18px;
+  line-height: 22px;
+}
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.downloads{
+  font-size: 14px;
+  line-height: 17px;
+}
+.rating-store{
+  font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+color: rgb(29, 29, 29);
+}
+.rating-separator{
+width: 2px;
+background: rgb(193, 193, 193);
+
+}
+.star{
+font-size: 19px;
+}
+.scan-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scan-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rem;
+  gap: 3rem;
+
+}
+.redbus-scan{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 450px;
+  bottom: 100px;
+  position: relative;
+  gap: 10px;
+  width: 106px;
+    height: 106px;
+}
+.scan-text{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+}
+.download-app{
+  display: flex;
+  flex-direction: column;
+  width: 147px;
+  height: 155px;
+  right: 400px;
+  bottom: 120px;
+  position: relative;
+  gap: 10px;
+}
+.download-text{
+  width: 119px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+.img-download{
+display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.partialList
+{
+  margin: 5.625rem 0;
+}
+.primeSectionContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.25rem;
+}
+.primeImgContainer{
+  width: 29rem;
+  height: 12.8rem;
+}
+.primePromoSection{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.primepromo{
+  width: 22rem;
+  height: 9.8rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, rgb(38, 72, 153), rgb(125, 70, 134));
+  gap: 1.0rem;
+}
+.primeSubHeading{
+  display: flex;
+    flex-direction: column;
+    width: 12.5rem;
+    gap: 0.75rem;
+}
+.primeSubTextContainer{
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 700;
+ 
+}
+.primeParaContainer{
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.ptsSection{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width:70%;
+  height: auto;
+}
+.ptsHeadingSection{
+  display: flex;
+  flex-direction: column;
+}
+.ptsHeadingText{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0px 0px 3rem;
+  font-weight: 400;
+ margin-left: 180px;
+ color: #4a4a4a;
+}
+.ptsno{
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    margin-left: 180px;
+}
+.pts-viewAll{
+  color: rgb(29, 29, 29);
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+}
+.rtcPartnerWith{
+    width: auto;
+    height: auto;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 180px;
+    justify-content: space-between;
+}
+.rtc-img{
+  width: 6rem;
+  height: 6rem;
+  margin: 0rem 1rem
+}
+
+.rtc-logo{
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+  -webkit-box-align: center;
+  align-items: center;
+}
+.rtc-logo-img{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rtc-text{
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+}
+.rtc-text:hover{
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+.operator-container {
+  display: flex;
+  left: 160px;
+  position: relative;
+  flex-flow: wrap;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 0.5rem 1.75rem; 
+}
+.operator-Section{
+  width: 80%;
+}
+.operator-container-section {
+  width: 11rem;
+}
+.operator-list
+ {
+  display: inline-block;
+  color: rgb(29, 29, 29);
+  text-decoration: none;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  flex-basis: calc(15% - 24px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 4.25rem;
+  max-width: 10.5rem;
+}
+.faq-container{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.faq-section{
+  display: flex;
+  left: 150px;
+  position: relative;
+  align-items: center;
+} 
+.faq-text{
+  color: #4a4a4a;
+  margin: 10px;
+  padding: 5px;
+}
+.ques-type-container{
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  left: 150px;
+  position: relative;
+}
+.general {
+  border-bottom: 3px solid rgb(216, 78, 85); /* Add a red color border */
+}
+.general,
+.question{
+  color: #494242;
+  cursor: pointer;
+}
+.question:hover{
+  border-bottom:3px solid #a59d9d;
+}
+.general-ques{
+  display: flex;
+  justify-content:space-around;
+  padding: 10px;
+  left: 0px;
+  position: relative;
+}

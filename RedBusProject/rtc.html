@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.faq-container{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.faq-section{
+  display: flex;
+  left: 150px;
+  position: relative;
+  align-items: center;
+} 
+.faq-text{
+  color: #4a4a4a;
+  margin: 10px;
+  padding: 5px;
+}
+.ques-type-container{
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  left: 150px;
+  position: relative;
+}
+.horizontal-line{
+  border-bottom: 10px solid rgb(216, 78, 85);
+  border-radius: 3px 3px 0px 0px;
+}
+.general {
+    border-bottom: 3px solid red; /* Add a red color border */
+  }
+.general,
+.question{
+  color: #494242;
+  cursor: pointer;
+}
+.question:hover{
+  border-bottom:3px solid #a59d9d;
+}
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="partialList">
+    <div class="faq-container">
+      <div class="faq-section">
+        <h2 class="faq-text">FREQUENTY ASKED QUESTION</h2>
+      </div>
+    </div>
+    <div class="ques-type-container">
+      <div class="general">General</div>
+        <div class="question">Ticket Related</div>
+        <div class="question">Payment</div>
+        <div class="question">Cancellation & Refund</div>
+        <div class="question">Insurance</div>
+      </div>
+     
+    </div>
+  </div> 
+</body>
+
+</html>

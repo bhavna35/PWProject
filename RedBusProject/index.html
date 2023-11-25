@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedBus</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <!-- Header of webpage -->
+  <header>
+    <div class="redbus-header">
+      <img class="redbus-logo" src="assets/rdc-redbus-logo.svg" alt="">
+      <!-- Vertical Separator -->
+      <span class="vertical-separator"></span>
+      <!-- Primary Item -->
+      <ul class="redbus-primary-items">
+        <li class="redbus-primary-item"><img class="img-rb" src="assets/rb_vertical.svg" alt="">Bus Tickets </li>
+        <li class="redbus-primary-item"><img class="img-rb" src="assets/ryde_vertical.svg" alt="">Cab Rental</li>
+        <li class="redbus-primary-item"><img class="img-rb" src="assets/rail_vertical.svg" alt="">Train Tickets</li>
+      </ul>
+      <!-- Secondary Item -->
+      <ul class="redbus-secondary-items">
+        <li class="redbus-secondary-item">
+          <i class="material-symbols-outlined">call_quality</i>Help
+        </li>
+        <li class="redbus-secondary-item">
+          <i class="material-symbols-outlined">account_circle</i>Account
+          <span class="material-symbols-outlined">arrow_drop_down</span>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- Hero Section -->
+
+  <div class="wrapper">
+    <div class="heroimage">
+      <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
+      <div class="route">
+        <div class="redbus-route">
+          <!-- from  -->
+          <div class="from">
+            <!-- bus symbol -->
+            <div class="bus-icon">
+              <span class="material-symbols-outlined bus-icons">
+                directions_bus
+              </span>
+            </div>
+            <label for="source" class="from-label">From</label>
+            <input tabindex="-1" id="source" type="text" class="from-input">
+          </div>
+          <!-- arrow symbol -->
+          <div class="icons"><span class="material-symbols-outlined icon">sync_alt</span></div>
+
+          <div class="to">
+            <!-- bus symbol -->
+            <div class="bus-icon">
+              <span class="material-symbols-outlined bus-icons">
+                directions_bus
+              </span>
+            </div>
+            <label for="desti" class="to-label">To</label>
+            <input tabindex="-1" id="desti" type="text" class="to-input">
+          </div>
+
+          <div class="date">Date</div>
+          <div class="search-area">Search Buses</div>
+        </div>
+      </div>
+      <!-- Wrapper for offer section -->
+      <div class="offerwrapper">
+        <div class="offersection">
+          <!-- Start of offer section heading -->
+          <div class="offerheadsection">
+            <div class="offertext">TRENDING OFFERS</div>
+            <div class="viewoffer">View All</div>
+          </div>
+          <!--End of offer heading section  -->
+          <!-- Start of offer card -->
+          <div class="webcarasoul">
+            <div class="card"><img src="assets/card1.jpg" alt=""></div>
+            <div class="card"><img src="assets/card2.png" alt=""></div>
+            <div class="card"><img src="assets/card3.jpg" alt=""></div>
+          </div>
+          <!-- End of offer card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- start of ad block of page -->
+  <div class="adWrapper">
+    <div class="adtechCard">
+      <div class="adcard">
+        <img src="assets/adcard.png" alt="" style="height: 100%;width: 100%;border-radius: 12px;">
+      </div>
+    </div>
+  </div>
+  <!-- End of ad block -->
+
+  <!-- Start of About us  -->
+  <div class="about-container">
+    <div class="about-us-main-container">
+      <div class="about-us">
+        <!-- left -->
+        <div class="about-us-left-top">
+          <!-- left heading section -->
+          <h2 class="about-us-heading">NOW,<b> GET MORE THAN JUST BUS</b> TICKETS WITH REDBUS!</h2>
+          <!-- Start of left lob section -->
+          <div class="about-lob">
+            <!-- start of lob container  for cab -->
+            <div class="lob-container">
+              <div class="about-cab">
+                <img src="assets/cab.svg" alt="">
+                <div class="lob-text">Cab/Rental Buses</div>
+              </div>
+              <!-- horizontal line -->
+              <div class="footerBorderSelected"></div>
+            </div>
+            <!-- vertical separator -->
+            <div class="aboutus-separator">
+              <div class="separator"></div>
+            </div>
+            <!-- Start of lob container for train -->
+            <div class="lob-container">
+              <div class="about-train">
+                <img src="assets/rail_vertical.svg" alt="">
+                <div class="lob-text">Train Tickets</div>
+              </div>
+              <div class="footerBorder"></div>
+            </div>
+          </div>
+          <!-- End of Lob container -->
+          <div class="slide-right">
+            <div class="slide-text">
+              Rent Cabs, Tempo Travellers & Buses with best drivers
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_car.svg" alt="">
+              <div class="slide-icon-text">
+                Outstation
+              </div>
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_car_hourly.svg" alt="">
+              <div class="slide-icon-text">
+                Hourly Rental
+              </div>
+            </div>
+            <div class="slide-icon">
+              <img src="assets/ryde_airport_transport.svg" alt="">
+              <div class="slide-icon-text">Airport Transfers</div>
+            </div>
+          </div>
+          <a href="#" class="about-us-bookoption">Book Cab / Bus Rental<span class="material-symbols-outlined">
+              arrow_forward
+            </span></a>
+        </div>
+        <!-- end of left -->
+        <!-- Start of right -->
+        <div class="rightsection">
+          <img src="assets/rydePopcar.svg" class="img-right">
+        </div>
+        <!-- End of right  -->
+      </div>
+      <!--  End of container  -->
+    </div>
+  </div>
+
+
+  <!-- Start the app block of webpage -->
+  <div class="app-main-block">
+    <div class="app-block">
+
+      <div class="app">
+        <div class="app-text">Enjoy the App!</div>
+      </div>
+      <!-- Creating a store box for showing functionalities -->
+      <div class="store">
+        <div class="store-code">
+          <div class="quick-box">
+            <div class="quick-access">
+              <img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt="tick" width="22px"
+                height="22px">
+              <text class="quick">Quick access</text>
+            </div>
+
+            <div class="quick-access">
+              <img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt="tick" width="22px"
+                height="22px">
+              <text class="quick">Superior live tracking</text>
+            </div>
+          </div>
+          <!-- Creating rating box  -->
+          <div class="rating-container">
+            <div class="rating-box">
+              <text class="text-label"><label>4.5</label>
+                <span class="material-symbols-outlined star">
+                  star_rate_half
+                </span>
+              </text>
+              <text class="downloads">50M+ downloads</text>
+              <div class="rating-store">Play Store</div>
+            </div>
+            <!-- code for line separator -->
+            <div class="rating-separator"></div>
+
+            <div class="rating-box">
+              <text class="text-label"><label>4.6</label>
+                <span class="material-symbols-outlined star">
+                  star_rate_half
+                </span>
+              </text>
+              <text class="downloads">50M+ downloads</text>
+              <div class=" rating-store">App Store</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- right portion of app block -->
+
+      <div class="scan-container">
+        <div class="scan-box">
+
+          <div class="redbus-scan">
+            <text class="scan-text">Scan to download</text>
+            <img src="https://s1.rdbuz.com/web/images/homeV2/qrCode.svg" alt="QrCodeImg" class=" bGbiZT">
+          </div>
+
+          <div class="download-app">
+            <text class="download-text">Download the App on</text>
+            <div class="img-download">
+              <img src="https://s2.rdbuz.com/web/images/homeV2/appinstall/playStore.svg" alt="playstore" height="42px"
+                width="145px" class="jNnyJy">
+              <img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/appStore.svg" alt="AppStoreImg" height="46px"
+                width="147px" class="bjjyQY">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Start of Prime List -->
+
+  <div class="partialList">
+    <div class="primeSectionContainer">
+      <div class="primeImgContainer">
+        <img src="assets/primoTopBanner.svg" alt="">
+      </div>
+
+      <div class="primePromoSection">
+        <div class="primepromo">
+          <!-- Image 1 -->
+          <div class="primeSubImgContainer">
+            <img src="assets/primoSubImg1.svg" alt="">
+          </div>
+          <!-- Primo Heading 1 -->
+          <div class="primeSubHeading">
+            <text class="primeSubTextContainer">1 of 5 buses qualify</text>
+            <text class="primeParaContainer">Primos strict safety qualification ensures a safer travel for you</text>
+          </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="primepromo">
+          <div class="primeSubImgContainer">
+            <img src="assets/primoSubImg2.svg" alt="">
+          </div>
+          <!-- Primo Heading 2 -->
+          <div class="primeSubHeading">
+            <text class="primeSubTextContainer">Preferred by 90%</text>
+            <text class="primeParaContainer">90% of travellers re-book Primo buses for its punctuality and
+              comfort</text>
+          </div>
+        </div>
+        <div class="primepromo">
+          <!-- Image 3 -->
+          <div class="primeSubImgContainer">
+            <img src="assets/primoSubImg3.svg" alt="">
+          </div>
+          <!-- Heading 3 -->
+          <div class="primeSubHeading">
+            <text class="primeSubTextContainer">9 Lac+ monthly travellers</text>
+            <text class="primeParaContainer">In 2022, 9 Lac+ people traveled with Primo every month</text>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Prime List -->
+
+  <!-- Start of Partners Sections -->
+  <div class="partialList">
+    <div class="ptsSection">
+      <div>
+        <div class="ptsHeadingSection">
+          <h2 class="ptsHeadingText">PARTNERED WITH</h2>
+        </div>
+        <div class="ptsno">25 RTCs
+          <a href="" class="pts-viewAll">View All</a>
+        </div>
+      </div>
+      <!-- Rtc Partner -->
+      <div class="rtcPartnerWith">
+        <div class="rtc-logo">
+          <div class="rtc-logo-img">
+            <img src="assets/rtc1.png" alt="" class="rtc-img">
+            <text class="rtc-text">APSRTC</text>
+          </div>
+          <div class="rtc-logo-img">
+            <img src="assets/rtc2.svg" alt="" class="rtc-img">
+            <text class="rtc-text">GSRTC</text>
+          </div>
+          <div class="rtc-logo-img">
+            <img src="assets/rtc3.png" alt="" class="rtc-img">
+            <text class="rtc-text">TSRTC</text>
+          </div>
+          
+          <div class="rtc-logo-img">
+            <img src="assets/rtc4.png" alt="" class="rtc-img">
+            <text class="rtc-text">MSRTC</text>
+          </div>          
+          <div class="rtc-logo-img">
+            <img src="assets/rtc5.svg" alt="" class="rtc-img">
+            <text class="rtc-text">KERALA RTC</text>
+          </div>          
+          <div class="rtc-logo-img">
+            <img src="assets/rtc6.png" alt="" class="rtc-img">
+            <text class="rtc-text">SBSTC</text>
+          </div>          
+          <div class="rtc-logo-img">
+            <img src="assets/rtc7.svg" alt="" class="rtc-img">
+            <text class="rtc-text">RSRTC</text>
+          </div>          
+          <div class="rtc-logo-img">
+            <img src="assets/rtc8.svg" alt="" class="rtc-img">
+            <text class="rtc-text">UPRSTC</text>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Partner list -->
+
+  <!-- Start of operators -->
+  <div class="partialList">
+    <div class="operator-Section">
+      <div>
+        <div class="ptsno">3500+ Private Bus Operators
+          <a href="" class="pts-viewAll">View All</a>
+        </div>
+      </div>
+      <div class="operator-container">
+        <div class="operator-container-section">
+          <a href="https://www.redbus.in/travels/srs-travels-srs" class="operator-list">SRS
+            Travels</a>
+        </div>
+        <div class="operator-container-section">
+          <a href="https://www.redbus.in/travels/evacay-bus" class="operator-list">Evacay
+            Bus</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/kallada-travels-kallada"
+            class="operator-list">Kallada
+            Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/kpn-travels-kpn"
+            class="operator-list">KPN
+            Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/orange-travels-orange"
+            class="operator-list">Orange
+            Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/parveen-travels"
+            class="operator-list">Parveen Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/rajdhani-express"
+            class="operator-list">Rajdhani Express</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/vrl-travels-vrl"
+            class="operator-list">VRL
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/chartered-bus"
+            class="operator-list">Chartered Speed Bus</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/bengal-tiger"
+            class="operator-list">Bengal
+            Tiger</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels//srm-travels-srm"
+            class="operator-list">SRM
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/infant-jesus"
+            class="operator-list">Infant
+            Jesus</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/patel-travels-lufthanza-9940"
+            class="operator-list">Patel
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/jbt-travels"
+            class="operator-list">JBT
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/shatabdi-travels-1"
+            class="operator-list">Shatabdi
+            Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/eagle-travels"
+            class="operator-list">Eagle
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/kanker-roadways-10172"
+            class="operator-list">Kanker
+            Roadways</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/komitla"
+            class="operator-list">Komitla</a>
+
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/sri-krishna-travels"
+            class="operator-list">Sri Krishna
+            Travels</a></div>
+        <div class="operator-container-section"><a class="operator-list">Humsafar Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/mahasagar-travels-mahasagar"
+            class="operator-list">Mahasagar
+            Travels</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/raj-express-1"
+            class="operator-list">Raj
+            Express</a></div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/sharma-travels"
+            class="operator-list">Sharma Travels</a>
+        </div>
+        <div class="operator-container-section"><a href="https://www.redbus.in/travels/shrinath-travels-agency-online"
+            class="operator-list">Shrinath
+            Travels</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- End of operator list -->
+
+  <!-- Start of FAQ -->
+<div class="partialList">
+  <div class="faq-container">
+    <div class="faq-section">
+      <h2 class="faq-text">FREQUENTY ASKED QUESTION</h2>
+    </div>
+  </div>
+  <div class="ques-type-container">
+      <div class="general">General</div>
+      <div class="question">Ticket Related</div>
+      <div class="question">Payment</div>
+      <div class="question">Cancellation & Refund</div>
+      <div class="question">Insurance</div>
+    </div>
+  </div>
+  <div class="general-ques">
+    <text class="ques-text">Can I track the location of my booked bus online?</text>
+    <span class="material-symbols-outlined">
+      add
+      </span>
+  </div>
+</div> 
+</body>
+</html>
