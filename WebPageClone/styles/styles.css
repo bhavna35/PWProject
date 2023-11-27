@@ -1,53 +1,33 @@
-*{
+/* Default styles for all screen sizes */
+
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-body{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
- 
-}
-.bg-image{
-  background-image: url(/WebPageClone/assets/background-image.png);
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  position: relative;
-}
-li {
-  list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
+/* Header styles */
 header {
-  padding: 10px 5px;
+  padding: 10px;
 }
 
 nav {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
 }
 
-nav ul {
+ul {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-  font-weight: 700;
-  font-size: larger;
 }
 
+ul li {
+  margin-right: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
 .btn-search {
   background-color: #f061b7;
   padding: 6px 10px;
@@ -58,7 +38,6 @@ nav ul {
   font-weight: 700;
   width: fit-content;
 }
-
 .search-field {
   display: flex;
   gap: 10px;
@@ -75,46 +54,28 @@ nav ul {
   border-radius: 20px;
   background-color: white;
 }
- .loan-calculate-btn {
- margin-left: 10px;
-  background-color: #ffffff;
-  padding: 6px 10px;
-  cursor: pointer;
-  color: #f061b7;;
-  border: 1px solid  #f061b7;;
-  border-radius: 5px;
-  width: fit-content;
-} 
-
-/* hero Section */
+.loan-calculate-btn {
+  margin-left: 10px;
+   background-color: #ffffff;
+   padding: 6px 10px;
+   cursor: pointer;
+   color: #f061b7;;
+   border: 1px solid  #f061b7;;
+   border-radius: 5px;
+   width: fit-content;
+ } 
+/* Hero section styles */
 .hero-section {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-/* hero left section */
-.hero-left-section {
-  width: 50%;
-  padding: 0 8%;
+  padding: 50px;
+  background-color: #f2f2f2;
 }
 
-.hero-left-section h1 {
-  margin-bottom: 20px;
-  font-weight: 800;
-  font-size: 45px;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto Slab', serif;
-}
-.hero-left-section p{
-  font-weight:100;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-/* Right Section */
+.hero-left-section,
 .hero-right-section {
-  display: flex;
-  /* width: 50%; */
-  align-items: center;
-  
+  flex: 1;
 }
 .hero-right-section-btn {
   display: flex;
@@ -128,7 +89,8 @@ nav ul {
   border-radius: 20px;
   background-color: white;
 }
-/* footer */
+
+/* Footer styles */
 footer{
   display: flex;
   justify-content:space-between;
@@ -137,4 +99,50 @@ footer{
   display: flex;
   gap: 10px;
   margin-left: 130px;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    margin-top: 10px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-left-section,
+  .hero-right-section {
+    margin-bottom: 20px;
+  }
+ /* Adjusting button positions in the media query */
+ .car-loan {
+  left: 200px;
+  top: auto;
+  right: 10px;
+  bottom: 10px;
+  position: relative;
+}
+
+.loan-calculate-btn {
+  margin-left: 0;
+}
+
+.hero-right-section-btn {
+  right: auto;
+  bottom: auto;
+  left: 400px;
+  top: 10px;
+  position: relative;
+}
+  
 }
