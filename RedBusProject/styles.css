@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Montserrat:wght@200;300;400&family=Oswald:wght@500&family=Poppins&family=Roboto+Slab&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+body{
+  min-width: 1000px;
+  color: #4a4a4a;
+  height: 100%;
+  overflow-y: scroll;
+  word-break: break-word;
+  font-family: 'Montserrat';  
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
 }
 /* header  */
 header {
@@ -435,7 +448,7 @@ color: rgb(29, 29, 29);
 }
 .app-main-block {
   position: relative;
-  height: 32.5rem;
+  height: 35.7rem;
   margin: 6.25rem;
 }
 
@@ -488,7 +501,6 @@ color: rgb(29, 29, 29);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 2.25rem
 }
 
 .quick-access {
@@ -746,6 +758,9 @@ display: flex;
   border-radius: 4.25rem;
   max-width: 10.5rem;
 }
+.faq{
+  margin: 2.5rem 0;
+}
 .faq-container{
   display: flex;
   align-items: center;
@@ -780,10 +795,164 @@ display: flex;
 .question:hover{
   border-bottom:3px solid #a59d9d;
 }
-.general-ques{
+.general-container{
   display: flex;
-  justify-content:space-around;
-  padding: 10px;
-  left: 0px;
-  position: relative;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 50%;
+  margin-left: 150px;
+}
+.general-ques{
+  border-radius: 1rem;
+  border: 1px solid rgb(243, 244, 249);
+  padding: 1.75rem 1.5rem;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(29, 29, 29);
+  cursor: pointer;
+}
+.ques-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+.global-container{
+  margin: 0 7.5rem;
+}
+.global-section{
+  padding: 5.625rem 0px;
+}
+.global-text{
+  margin: 0px 0px 2rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: rgb(29, 29, 29);
+  font-weight: 500;
+}
+.global-icon-container{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.global-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.global-img{
+  width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+.country-name{
+  font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: rgb(29, 29, 29);
+    padding: 0.6rem 2rem;
+}
+.scroll-wrapper{
+  display: flex;
+    margin: 0 7.5rem 2rem;
+    justify-content: end;
+}
+.scroll-wrapper .scroll-button {
+    padding: 1.5rem 0.5rem 0.75rem;
+    border: 1px solid #3e3e52;
+    border-radius: 16px;
+    width: 40px;
+    height: 56px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+/* footer */
+#footer{
+  background-color: #f7f7f7;
+}
+.redbus-footer{
+  color: #3e3e52;
+  padding: 3rem 7.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 20px;
+}
+
+.footer-seo-content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-seo-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-title{
+  font-size: 1.125rem;
+    color: #1d1d1d;
+    margin: 0;
+}
+.redbus-footer .footer-seo-content .footer-seo-section .footer-seo-link {
+  color: #3e3e52;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.redbus-footer .footer-seperator {
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 100%;
+}
+.redbus-footer .footer-links{
+  display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.redbus-footer .footer-links .footer-section-link{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-text-logo{
+  width: 200px;
+}
+
+.redbus-footer .footer-links .footer-section-link .footer-title {
+  font-size: 20px;
+  color: #1d1d1d;
+  margin: 0;
+}
+.redbus-footer .footer-links .footer-section-link {
+  width: 17rem;
+}
+.redbus-footer .footer-links .footer-section-link .footer-section-logo .redbus-footer-logo {
+  width: 6.25rem;
+  height: 4.1rem;
+}
+
+.redbus-footer .footer-links .footer-section-link .footer-seo-link {
+  color: #3e3e52;
+}
+.copyright-social-section{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copyright-text{
+  color: #3e3e52;
+}
+
+.social-section{
+  display: flex;
+    gap: 1.5rem;
+}
+.social-footer-icon{
+  cursor: pointer;
 }
